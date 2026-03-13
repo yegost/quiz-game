@@ -6,6 +6,9 @@ const optionsDiv = document.getElementById('options');
 const scoreNum = document.getElementById('score');
 const progressText = document.getElementById('progress-text');
 const progressBar = document.getElementById('progress-bar');
+const resultsScreen = document.getElementById('results-screen');
+const finalScore = document.getElementById('final-score');
+const resultMessage = document.getElementById('result-message');
 
 const questions = [
   {
@@ -74,7 +77,22 @@ function handleAnswer(a) {
         } else {
             showResults();
         }
-    }, 1000)
+    }, 1)
+}
+
+function showResults() {
+    questionScreen.classList.add('hidden');
+    resultsScreen.classList.remove('hidden');
+
+    finalScore.textContent = score;
+    switch((score)) {
+        case 0: resultMessage.textContent = 'bad'; break;
+        case 1: resultMessage.textContent = 'ugh'; break;
+        case 2: resultMessage.textContent = 'meh'; break;
+        case 3: resultMessage.textContent = 'decent'; break;
+        case 4: resultMessage.textContent = 'good'; break;
+        case 5: resultMessage.textContent = 'very good'; break;
+    }
 }
 
 startBtn.addEventListener('click', startQuiz);
