@@ -14,37 +14,28 @@
                 <p>Test your knowledge. 5 questions. Let's go.</p>
                 <button id="start-btn">Start Quiz →</button>
             </div>
-
             <div id="question-screen" class="screen hidden">
                 <div class="quiz-header">
                     <span class="quiz-label">Quiz Game</span>
                     <span id="progress-text">1 / 5</span>
                 </div>
-
                 <div id="progress-bar-wrap">
                     <div id="progress-bar"></div>
                 </div>
-
-                <p id="question-text">
-                </p>
-
+                <p id="question-text"></p>
                 <div id="options">
                 </div>
-
                 <div id="score-display">
                     Score: <span id="score">0</span>
                 </div>
             </div>
+            <div id="results-screen" class="screen hidden">
+                <p class="result-label">Your result</p>
+                <div class="big-score" id="final-score">0/5</div>
+                <p class="result-message" id="result-message">Well done!</p>
+                <button id="restart-btn">Play Again →</button>
+            </div>
         </div>
-
-        <div id="results-screen" class="screen hidden">
-            <p class="result-label">Your result</p>
-            <div class="big-score" id="final-score">0/5</div>
-            <p class="result-message" id="result-message">Well done!</p>
-            <button id="restart-btn">Play Again →</button>
-        </div>
-
-    </div>
-
+        <script src="script.js"></script>
     </body>
 </html>
